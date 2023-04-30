@@ -37,14 +37,18 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r krxbot/requirements.txt
 
-    - name: Run
+    - name: Run main.py
       run: |
         python krxbot/src/main.py
 
-    - name: test 1
+    - name: Commit file
       run: |
-        ls -al
+        git config user.name 'github-actions[bot]'
+        git config user.email '<github-actions@github.com>'
+        git add stock_price*
+        git commit -m '[Bot] Update file'
 
-    - name: test 1
+
+    - name: GitHub Push
       run: |
         git status
