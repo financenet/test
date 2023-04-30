@@ -45,7 +45,7 @@ jobs:
         git add stock_price*
         git commit -m '[Bot] Update file'
         echo $GITHUB_ACTOR
-        echo 'https://gunhoon:{{ github.ref }}@github.com/financenet/test.git'
+        echo 'https://gunhoon:${{ github.ref }}@github.com/financenet/test.git'
 
     - name: GitHub Push
       run: git push https://gunhoon:${{ secrets.GITHUB_TOKEN }}@github.com/financenet/test.git HEAD:${{ github.ref }}
