@@ -24,7 +24,7 @@ jobs:
     - name: Checkout krxbot
       uses: actions/checkout@v3
       with:
-        repository: gunhoon/example-code
+        repository: financenet/example-code
         path: krxbot
 
     - name: Set up Python 3.10
