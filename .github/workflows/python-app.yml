@@ -37,11 +37,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r krxbot/requirements.txt
 
-    - name: Test 1
+    - name: Run
       run: |
-        ls -al
-
-    - name: Test 1
-      run: |
-        cd krxbot
-        ls -al
+        python krxbot/src/main.py
