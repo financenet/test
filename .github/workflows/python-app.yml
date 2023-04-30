@@ -46,10 +46,3 @@ jobs:
         git commit -m '[Bot] Update file'
         echo $GITHUB_ACTOR
 
-
-
-    - name: GitHub Push
-      run: git push
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
