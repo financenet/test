@@ -20,6 +20,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    # Checkout krxbot
+    - name: Checkout krxbot
+      uses: actions/checkout@v3
+      with:
+        repository: gunhoon/krxbot
+        path: krxbot
+
     - name: Set up Python 3.10
       uses: actions/setup-python@v4
       with:
@@ -29,3 +36,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Test 1
+      run: |
+        ls -al
+
+    - name: Test 2
+      run: |
+        cd krxbot
+        ls -al
